@@ -34,6 +34,7 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
+        // return dd($request->files);
         // return dd(Str::slug($request->title));
         $request['slug']=Str::slug($request->title);
         // return dd($request['slug']);
@@ -49,7 +50,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         // return dd($post);
-        $post = Post::find($post['slug']);
+        $post = Post::find($post->slug);
         return view('posts.show',compact('post'));
     }
 

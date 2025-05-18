@@ -13,7 +13,8 @@ class Post extends Model
     protected $fillable = [
         'title',
         'text',
-        'slug'
+        'slug',
+        'img'
     ];
 
     protected $primaryKey = 'slug';
